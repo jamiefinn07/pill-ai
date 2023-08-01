@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+import os
 import sys
 import jetson_inference
 import jetson_utils
@@ -6,6 +7,7 @@ from jetson_inference import imageNet
 from jetson_utils import videoSource, videoOutput, cudaFont, Log
 import time
 import argparse
+clear = lambda: os.system('clear')
 parser = argparse.ArgumentParser(description="Classify a live camera stream using an image recognition DNN.", 
                                  formatter_class=argparse.RawTextHelpFormatter, 
                                  epilog=imageNet.Usage() + videoSource.Usage() + videoOutput.Usage() + Log.Usage())
@@ -74,7 +76,7 @@ while True:
         "Avoid in Children and Teens with Viral Infections: Due to Reye's syndrome risk.",
         "Overdose Concerns: Can cause severe liver damage or be fatal if overdosed.",
         "Use Responsibly: Follow recommended dosage, avoid interactions with other drugs or alcohol. Consult a healthcare professional for specific concerns."]
-
+    clear()
     # class_desc = "Tylenol"
     class_desc.strip()
     class_desc.replace(" ", "")
@@ -88,3 +90,4 @@ while True:
         for item in advil_facts:
             print(item)
     time.sleep(1)
+    
