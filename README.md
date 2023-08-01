@@ -15,6 +15,6 @@ The program uses a retrain version of resnet 18 to differentiate between three p
 3. Grab pill bottle
 4. scan through camera
 5. take apropiate dosage and pill according to information
-6. run this code python3 my-recognition.py /dev/video0 rtp://<Your Ip>:1234
+6. run this code python3 my-recognition.py /dev/video0 rtp://Your Ip:1234
 
 [View a video explanation here](https://youtu.be/47oyuavFB8Q)
